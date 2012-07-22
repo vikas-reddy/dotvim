@@ -90,7 +90,7 @@ command -range Comment <line1>,<line2>s/^./#&/
 command -range Uncomment <line1>,<line2>s/^#//
 
 " vividchalk colorscheme
-"colorscheme vividchalk
+colorscheme vividchalk
 
 " Filetype syntax bindings
 au BufNewFile,BufRead *.ejs set filetype=html
