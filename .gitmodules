@@ -16,3 +16,6 @@
 [submodule "bundle/repmo.vim"]
 	path = bundle/repmo.vim
 	url = https://github.com/vim-scripts/repmo.vim.git
+[submodule "bundle/nerdtree"]
+	path = bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
