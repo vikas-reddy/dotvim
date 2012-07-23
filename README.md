@@ -6,6 +6,7 @@ git submodule add https://github.com/tpope/vim-vividchalk.git bundle/vim-vividch
 git submodule add https://github.com/godlygeek/tabular.git bundle/tabular  
 git submodule add https://github.com/vim-scripts/repmo.vim.git bundle/repmo.vim  
 git submodule add https://github.com/scrooloose/nerdtree.git bundle/nerdtree  
+git submodule add https://github.com/kchmck/vim-coffee-script.git bundle/vim-coffee-script
 
 ## Deploy on new computers  
 cd ~  
