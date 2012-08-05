@@ -14,6 +14,7 @@ endif
 
 " Pathogen
 call pathogen#infect()
+"call pathogen#helptags()
 
 " Set background as dark. Other options: light
 set background=dark
