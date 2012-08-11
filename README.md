@@ -9,7 +9,7 @@ git submodule add https://github.com/scrooloose/nerdtree.git bundle/nerdtree
 git submodule add git://git.wincent.com/command-t.git bundle/command-t
 git submodule add https://github.com/kchmck/vim-coffee-script.git bundle/vim-coffee-script
 git submodule add https://github.com/ervandew/supertab.git bundle/supertab
-git submodule add https://github.com/NathanNeff/grails-vim.git bundle/grails-vim
+git submodule add https://github.com/tpope/vim-fugitive.git bundle/vim-fugitive
 
 ## Deploy on new computers  
 cd ~  

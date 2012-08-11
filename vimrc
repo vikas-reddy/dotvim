@@ -54,10 +54,10 @@ set pastetoggle=<F2>
 filetype indent on
 
 " The amount to block indent when using < and >
-set shiftwidth=2
+set shiftwidth=4
 
 " <TAB> is 4 spaces
-set tabstop=2
+set tabstop=4
 
 " Expand <TAB> to spaces
 set expandtab
@@ -95,3 +95,4 @@ colorscheme vividchalk
 
 " Filetype syntax bindings
 au BufNewFile,BufRead *.ejs set filetype=html
+au BufNewFile,BufRead *.gsp set filetype=html
