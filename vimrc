@@ -96,3 +96,11 @@ colorscheme vividchalk
 " Filetype syntax bindings
 au BufNewFile,BufRead *.ejs set filetype=html
 au BufNewFile,BufRead *.gsp set filetype=html
+
+if &t_Co > 255
+    " cursorline
+    set t_Co=256
+    :hi CursorLine cterm=NONE ctermbg=235 ctermfg=NONE guibg=#222222 guifg=NONE
+    ":hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+    :nnoremap <Leader>c :set cursorline! <CR>
+end

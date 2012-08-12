@@ -10,6 +10,8 @@ git submodule add git://git.wincent.com/command-t.git bundle/command-t
 git submodule add https://github.com/kchmck/vim-coffee-script.git bundle/vim-coffee-script
 git submodule add https://github.com/ervandew/supertab.git bundle/supertab
 git submodule add https://github.com/tpope/vim-fugitive.git bundle/vim-fugitive
+git submodule add https://github.com/flazz/vim-colorschemes.git bundle/vim-colorschemes
+git submodule add https://github.com/tomasr/molokai.git bundle/molokai
 
 ## Deploy on new computers  
 cd ~  
