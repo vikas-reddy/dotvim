@@ -54,10 +54,10 @@ set pastetoggle=<F2>
 filetype indent on
 
 " The amount to block indent when using < and >
-set shiftwidth=2
+set shiftwidth=4
 
 " <TAB> is 4 spaces
-set tabstop=2
+set tabstop=4
 
 " Expand <TAB> to spaces
 set expandtab
@@ -95,9 +95,18 @@ colorscheme vividchalk
 
 " Filetype syntax bindings
 au BufNewFile,BufRead *.ejs set filetype=html
+au BufNewFile,BufRead *.gsp set filetype=html
 
 " Command-T options
 let g:CommandTMaxDepth=10
 let g:CommandTMaxFiles=5000
 let g:CommandTMaxHeight=20
 let g:CommandTMatchWindowReverse=1
+
+if &t_Co > 255
+    " cursorline
+    set t_Co=256
+    :hi CursorLine cterm=NONE ctermbg=235 ctermfg=NONE guibg=#222222 guifg=NONE
+    ":hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+    :nnoremap <Leader>c :set cursorline! <CR>
+end
