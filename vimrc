@@ -95,3 +95,9 @@ colorscheme vividchalk
 
 " Filetype syntax bindings
 au BufNewFile,BufRead *.ejs set filetype=html
+
+" Command-T options
+let g:CommandTMaxDepth=10
+let g:CommandTMaxFiles=5000
+let g:CommandTMaxHeight=20
+let g:CommandTMatchWindowReverse=1
