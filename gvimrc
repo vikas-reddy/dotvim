@@ -1,5 +1,5 @@
-set guifont=Monaco\ 10
-colorscheme molokai
+set guifont=Liberation\ Mono\ 11
+colorscheme made_of_code
 set anti
 set guioptions-=T
 set guioptions-=r
