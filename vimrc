@@ -91,11 +91,22 @@ command -range Comment <line1>,<line2>s/^./#&/
 command -range Uncomment <line1>,<line2>s/^#//
 
 " vividchalk colorscheme
-colorscheme vividchalk
+colorscheme molokai
 
-" Filetype syntax bindings
+" Filetype syntax and indentation bindings
 au BufNewFile,BufRead *.ejs set filetype=html
 au BufNewFile,BufRead *.gsp set filetype=html
+au FileType ruby setl shiftwidth=2 tabstop=2 expandtab
+au FileType haml setl shiftwidth=2 tabstop=2 expandtab
+
+" Command-T options
+let g:CommandTMaxDepth=10
+let g:CommandTMaxFiles=5000
+let g:CommandTMaxHeight=20
+let g:CommandTMatchWindowReverse=1
+
+" Pathogen options
+"let g:pathogen_disabled = ["color_picker"]
 
 " Only for 256-color terminals
 if &t_Co > 255
