@@ -99,6 +99,11 @@ au BufNewFile,BufRead *.gsp set filetype=html
 au FileType ruby setl shiftwidth=2 tabstop=2 expandtab
 au FileType haml setl shiftwidth=2 tabstop=2 expandtab
 
+" Custom maps
+" TODO: Write if (exists) for this
+:nnoremap <Leader>d :Gdiff <CR>
+:nnoremap <Leader>w :Gwrite <CR>
+
 " Command-T options
 let g:CommandTMaxDepth=10
 let g:CommandTMaxFiles=5000
