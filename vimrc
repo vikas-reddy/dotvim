@@ -113,10 +113,19 @@ let g:CommandTMatchWindowReverse=1
 " Pathogen options
 "let g:pathogen_disabled = ["color_picker"]
 
+" Only for 256-color terminals
 if &t_Co > 255
+    colorscheme vividchalk
     " cursorline
     set t_Co=256
     :hi CursorLine cterm=NONE ctermbg=235 ctermfg=NONE guibg=#222222 guifg=NONE
     ":hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
     :nnoremap <Leader>c :set cursorline! <CR>
 end
+
+if has("gui_running")
+    colorscheme molokai
+end
+
+" reload my vimrc
+:nmap <Leader>s :source ~/.vimrc!
