@@ -49,3 +49,9 @@
 [submodule "bundle/molokai"]
 	path = bundle/molokai
 	url = https://github.com/tomasr/molokai.git
+[submodule "bundle/tcomment-vim"]
+	path = bundle/tcomment-vim
+	url = https://github.com/tomtom/tcomment_vim.git
+[submodule "bundle/delimitMate"]
+	path = bundle/delimitMate
+	url = https://github.com/Raimondi/delimitMate.git

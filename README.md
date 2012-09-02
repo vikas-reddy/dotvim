@@ -1,6 +1,7 @@
 # dotvim
+I store all my vim configuration files and plugins here. Here's a list of all the submodules in this repo. Further, I use [tpope's pathogen](https://github.com/tpope/vim-pathogen) to organize my .vim!
 
-## First install  
+## List of submodules
     git submodule add https://github.com/tpope/vim-rails.git bundle/vim-rails
     git submodule add https://github.com/tpope/vim-haml.git bundle/vim-haml
     git submodule add https://github.com/tpope/vim-surround.git bundle/vim-surround
@@ -14,6 +15,8 @@
     git submodule add https://github.com/tpope/vim-fugitive.git bundle/vim-fugitive
     git submodule add https://github.com/flazz/vim-colorschemes.git bundle/vim-colorschemes
     git submodule add https://github.com/tomasr/molokai.git bundle/molokai
+    git submodule add https://github.com/tomtom/tcomment_vim.git bundle/tcomment-vim
+    git submodule add https://github.com/Raimondi/delimitMate.git bundle/delimitMate
 
 ## Deploy on new computers  
     cd ~
