@@ -52,3 +52,9 @@
 [submodule "bundle/tcomment-vim"]
 	path = bundle/tcomment-vim
 	url = https://github.com/tomtom/tcomment_vim.git
+[submodule "bundle/vim-endwise"]
+	path = bundle/vim-endwise
+	url = https://github.com/tpope/vim-endwise.git
+[submodule "bundle/nerdcommenter"]
+	path = bundle/nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter.git
