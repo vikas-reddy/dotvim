@@ -17,6 +17,7 @@ I store all my vim configuration files and plugins here. Here's a list of all th
     git submodule add https://github.com/tomasr/molokai.git bundle/molokai
     git submodule add https://github.com/tomtom/tcomment_vim.git bundle/tcomment-vim
     git submodule add https://github.com/Raimondi/delimitMate.git bundle/delimitMate
+    git submodule add https://github.com/Lokaltog/vim-powerline.git bundle/vim-powerline
 
 ## Deploy on new computers  
     cd ~
