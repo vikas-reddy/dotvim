@@ -1,0 +1,7 @@
+snippet =jslog
+	= javascript_tag "alert('#{${1:ruby_variable}.inspect}')"
+
+snippet -logger
+	- ActiveRecord::Base.logger.info "\n\n\n"
+	- ActiveRecord::Base.logger.info "#{${1:something}}\n"
+	- ActiveRecord::Base.logger.info "\n\n\n"
