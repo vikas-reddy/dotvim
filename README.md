@@ -29,3 +29,4 @@ I store all my vim configuration files and plugins here. Here's a list of all th
 
 ## Update/initalize submodules
     git submodule update --init
+    git submodule foreach git pull origin master
