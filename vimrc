@@ -11,7 +11,7 @@ call pathogen#infect()
 set nocompatible       " Vi compatibility
 set incsearch hlsearch " Incremental Search, Highlight Search
 set smartcase          " Smart Case while searching
-set laststatus=2       " Status line @ bottom
+set laststatus=1       " Status line @ bottom
 set showmatch          " Show matching braces
 set title              " Terminal title
 set noerrorbells       " No error bells
@@ -22,6 +22,7 @@ set nobackup           " Create backup (filename~) files in a given directory
 set shiftwidth=2
 set tabstop=2
 set expandtab
+set number
 syntax on
 filetype indent on
 
@@ -146,7 +147,7 @@ if has("autocmd")
   au FileType make setlocal noexpandtab
 
   " Set the Ruby filetype for a number of common Ruby files without .rb
-  " au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,Procfile,config.ru,*.rake} set ft=ruby
+  au BufRead,BufNewFile {Capfile,Gemfile,Rakefile,Vagrantfile,Thorfile,Procfile,config.ru,*.rake} set ft=ruby
 
   " Make sure all mardown files have the correct filetype set and setup wrapping
   au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn,txt} setf markdown | call s:setupWrapping()
