@@ -31,6 +31,7 @@ set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz                      " D
 set wildignore+=*/vendor/gems/*,*/vendor/cache/*,*/.bundle/*,*/.sass-cache/* " Ignore bundler and sass cache
 set wildignore+=*.swp,*~,._*                                                 " Disable temp and backup files
 set wildignore+=*.png,*.gif,*.jpg,*.jpeg                                     " Ignore non-text files
+set wildignore+=*/public/assets/*                                            " Ignore precompiled assets
 
 set list
 set listchars=""                  " Reset the listchars
@@ -123,6 +124,8 @@ nmap <leader>hs :set hlsearch! hlsearch?<CR>
 " Adjust viewports to the same size
 map <Leader>= <C-w>=
 
+" Fuzzy finder
+map <leader>t :CtrlP<cr>
 
 ""
 "" Helpers
@@ -163,3 +166,6 @@ if has("autocmd")
   au BufReadPost * if &filetype !~ '^git\c' && line("'\"") > 0 && line("'\"") <= line("$")
     \| exe "normal! g`\"" | endif
 endif
+
+"" Plugin customizations
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
