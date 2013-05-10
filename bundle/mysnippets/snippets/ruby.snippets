@@ -1,4 +1,4 @@
 snippet loggeri
-	ActiveRecord::Base.logger.info "\n\n\n"
-	ActiveRecord::Base.logger.info ${1}
-	ActiveRecord::Base.logger.info "\n\n\n"
+	ActiveRecord::Base.logger.info "#{'*' * 100}\n\n\n"
+	ActiveRecord::Base.logger.info "#{${1}.inspect}"
+	ActiveRecord::Base.logger.info "#{'*' * 100}\n\n\n"
