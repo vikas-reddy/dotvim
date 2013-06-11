@@ -33,6 +33,7 @@ set wildignore+=*/vendor/gems/*,*/vendor/cache/*,*/.bundle/*,*/.sass-cache/* " I
 set wildignore+=*.swp,*~,._*                                                 " Disable temp and backup files
 set wildignore+=*.png,*.gif,*.jpg,*.jpeg                                     " Ignore non-text files
 set wildignore+=*/public/assets/*                                            " Ignore precompiled assets
+set wildignore+=*/node_modules/*                                             " Ignore node_modules
 
 set list
 set listchars=""                  " Reset the listchars
@@ -73,8 +74,10 @@ if &t_Co > 255
     " cursorline
     set t_Co=256
     hi CursorLine cterm=NONE ctermbg=235 ctermfg=NONE guibg=#222222 guifg=NONE
-    "hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
-    nnoremap <Leader>c :set cursorline!<cr>
+    " hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+    hi CursorColumn cterm=NONE ctermbg=235 ctermfg=NONE guibg=#111111 guifg=NONE
+    nnoremap <leader>cl :set cursorline!<cr>
+    nnoremap <leader>cc :set cursorcolumn!<cr>
 end
 
 if has("gui_running")
