@@ -11,17 +11,19 @@ call pathogen#infect()
 set nocompatible       " Vi compatibility
 set incsearch hlsearch " Incremental Search, Highlight Search
 set smartcase          " Smart Case while searching
-set laststatus=2       " Status line @ bottom
+set laststatus=1       " Status line @ bottom
 set showmatch          " Show matching braces
 set title              " Terminal title
 set noerrorbells       " No error bells
 set ruler              " Row and Column Numbers
 set pastetoggle=<F2>   " Paste toggle
 set background=dark    " Set background as dark. Other options: light
+set backspace=indent,eol,start " To make backspace work in OSX
 set nobackup           " Create backup (filename~) files in a given directory
 set shiftwidth=2
 set tabstop=2
 set expandtab
+set number
 syntax on
 filetype indent on
 
@@ -30,6 +32,8 @@ set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz                      " D
 set wildignore+=*/vendor/gems/*,*/vendor/cache/*,*/.bundle/*,*/.sass-cache/* " Ignore bundler and sass cache
 set wildignore+=*.swp,*~,._*                                                 " Disable temp and backup files
 set wildignore+=*.png,*.gif,*.jpg,*.jpeg                                     " Ignore non-text files
+set wildignore+=*/public/assets/*                                            " Ignore precompiled assets
+set wildignore+=*/node_modules/*                                             " Ignore node_modules
 
 set list
 set listchars=""                  " Reset the listchars
@@ -70,8 +74,10 @@ if &t_Co > 255
     " cursorline
     set t_Co=256
     hi CursorLine cterm=NONE ctermbg=235 ctermfg=NONE guibg=#222222 guifg=NONE
-    "hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
-    nnoremap <Leader>c :set cursorline!<cr>
+    " hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+    hi CursorColumn cterm=NONE ctermbg=235 ctermfg=NONE guibg=#111111 guifg=NONE
+    nnoremap <leader>cl :set cursorline!<cr>
+    nnoremap <leader>cc :set cursorcolumn!<cr>
 end
 
 if has("gui_running")
@@ -122,6 +128,8 @@ nmap <leader>hs :set hlsearch! hlsearch?<CR>
 " Adjust viewports to the same size
 map <Leader>= <C-w>=
 
+" Fuzzy finder
+map <leader>t :CtrlP<cr>
 
 ""
 "" Helpers
@@ -146,7 +154,7 @@ if has("autocmd")
   au FileType make setlocal noexpandtab
 
   " Set the Ruby filetype for a number of common Ruby files without .rb
-  " au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,Procfile,config.ru,*.rake} set ft=ruby
+  au BufRead,BufNewFile {Capfile,Gemfile,Rakefile,Vagrantfile,Thorfile,Procfile,config.ru,*.rake} set ft=ruby
 
   " Make sure all mardown files have the correct filetype set and setup wrapping
   au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn,txt} setf markdown | call s:setupWrapping()
@@ -162,3 +170,6 @@ if has("autocmd")
   au BufReadPost * if &filetype !~ '^git\c' && line("'\"") > 0 && line("'\"") <= line("$")
     \| exe "normal! g`\"" | endif
 endif
+
+"" Plugin customizations
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
