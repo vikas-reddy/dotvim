@@ -20,9 +20,9 @@ set pastetoggle=<F2>   " Paste toggle
 set background=dark    " Set background as dark. Other options: light
 set backspace=indent,eol,start " To make backspace work in OSX
 set nobackup           " Create backup (filename~) files in a given directory
-set shiftwidth=2
-set tabstop=2
-set expandtab
+set shiftwidth=2 tabstop=2 expandtab
+set wildmenu
+set wildmode=full
 set number
 syntax on
 filetype indent on
