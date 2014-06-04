@@ -46,6 +46,7 @@ au BufNewFile,BufRead *.ejs set filetype=html
 au BufNewFile,BufRead *.gsp set filetype=html
 au FileType ruby setl shiftwidth=2 tabstop=2 expandtab
 au FileType haml setl shiftwidth=2 tabstop=2 expandtab
+au FileType java setl shiftwidth=3 tabstop=3 expandtab
 
 
 " PLUGIN CUSTOMIZATIONS and MAPPINGS
@@ -63,9 +64,6 @@ nnoremap <leader>sv :source ~/.vimrc<cr>
 
 " rails.vim customizations
 autocmd User Rails Rnavcommand presenter app/presenters -default=model()
-
-" 3-space indentation for java
-autocmd FileType java setlocal shiftwidth=3 tabstop=3 expandtab
 
 " Bufexplorer customizations
 let g:bufExplorerShowRelativePath=1
