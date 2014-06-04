@@ -8,18 +8,18 @@ call pathogen#infect()
 
 
 " GENERAL SETTINGS
-set nocompatible       " Vi compatibility
-set incsearch hlsearch " Incremental Search, Highlight Search
-set smartcase          " Smart Case while searching
-set laststatus=1       " Status line @ bottom
-set showmatch          " Show matching braces
-set title              " Terminal title
-set noerrorbells       " No error bells
-set ruler              " Row and Column Numbers
-set pastetoggle=<F2>   " Paste toggle
-set background=dark    " Set background as dark. Other options: light
-set backspace=indent,eol,start " To make backspace work in OSX
-set nobackup           " Create backup (filename~) files in a given directory
+set nocompatible                     " Vi compatibility
+set incsearch hlsearch               " Incremental Search, Highlight Search
+set ignorecase smartcase             " Smart Case while searching
+set laststatus=1                     " Status line @ bottom
+set showmatch                        " Show matching braces
+set title                            " Terminal title
+set noerrorbells                     " No error bells
+set ruler                            " Row and Column Numbers
+set pastetoggle=<F2>                 " Paste toggle
+set background=dark                  " Set background as dark. Other options: light
+set backspace=indent,eol,start       " To make backspace work in OSX
+set nobackup                         " Create backup (filename~) files in a given directory
 set shiftwidth=2 tabstop=2 expandtab
 set wildmenu
 set wildmode=full
@@ -63,6 +63,9 @@ nnoremap <leader>sv :source ~/.vimrc<cr>
 
 " rails.vim customizations
 autocmd User Rails Rnavcommand presenter app/presenters -default=model()
+
+" 3-space indentation for java
+autocmd FileType java setlocal shiftwidth=3 tabstop=3 expandtab
 
 " Bufexplorer customizations
 let g:bufExplorerShowRelativePath=1
@@ -130,6 +133,9 @@ map <Leader>= <C-w>=
 
 " Fuzzy finder
 map <leader>t :CtrlP<cr>
+
+" JSON format
+cmap jf %!python -mjson.tool
 
 ""
 "" Helpers
