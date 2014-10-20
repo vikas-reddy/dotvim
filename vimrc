@@ -131,6 +131,7 @@ map <Leader>= <C-w>=
 
 " Fuzzy finder
 map <leader>t :CtrlP<cr>
+map <leader>. :CtrlPTag<cr>
 
 " JSON format
 cmap jf %!python -mjson.tool
