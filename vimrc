@@ -62,6 +62,9 @@ nnoremap <Leader>gw :Gwrite<cr>
 nnoremap <leader>ev :split ~/.vimrc<cr>
 nnoremap <leader>sv :source ~/.vimrc<cr>
 
+" Acking for the word under cursor
+nnoremap <leader>/ :exe 'Ack -w ' . expand("<cword>") . ' app lib test'
+
 " rails.vim customizations
 autocmd User Rails Rnavcommand presenter app/presenters -default=model()
 
