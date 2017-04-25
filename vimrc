@@ -24,6 +24,7 @@ set shiftwidth=2 tabstop=2 expandtab
 set wildmenu
 set wildmode=full
 set number
+set clipboard=unnamed
 syntax on
 filetype indent on
 
@@ -181,3 +182,4 @@ endif
 
 "" Plugin customizations
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
