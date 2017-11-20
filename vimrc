@@ -17,7 +17,7 @@ set title                            " Terminal title
 set noerrorbells                     " No error bells
 set ruler                            " Row and Column Numbers
 set pastetoggle=<F2>                 " Paste toggle
-set background=dark                  " Set background as dark. Other options: light
+set background=light                  " Set background as dark. Other options: light
 set backspace=indent,eol,start       " To make backspace work in OSX
 set nobackup                         " Create backup (filename~) files in a given directory
 set shiftwidth=2 tabstop=2 expandtab
@@ -67,7 +67,7 @@ nnoremap <leader>sv :source ~/.vimrc<cr>
 nnoremap <leader>/ :exe 'Ack -w ' . expand("<cword>") . ' app lib test'
 
 " rails.vim customizations
-autocmd User Rails Rnavcommand presenter app/presenters -default=model()
+" autocmd User Rails Rnavcommand presenter app/presenters -default=model()
 
 " Bufexplorer customizations
 let g:bufExplorerShowRelativePath=1
