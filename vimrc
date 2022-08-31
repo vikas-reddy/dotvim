@@ -17,7 +17,7 @@ set title                            " Terminal title
 set noerrorbells                     " No error bells
 set ruler                            " Row and Column Numbers
 set pastetoggle=<F2>                 " Paste toggle
-set background=light                  " Set background as dark. Other options: light
+set background=dark                  " Set background as dark. Other options: light
 set backspace=indent,eol,start       " To make backspace work in OSX
 set nobackup                         " Create backup (filename~) files in a given directory
 set shiftwidth=2 tabstop=2 expandtab
